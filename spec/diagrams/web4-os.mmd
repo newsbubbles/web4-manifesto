@@ -1,6 +1,56 @@
 graph TD
-  Intent --> Orchestrator
-  Orchestrator --> Agent
-  Agent --> Tool
-  Tool --> CounterIntent
 
+    %% Human + Agent Layer
+    H[Human Agent]
+    PA[Personal Agent]
+
+    %% Core Loop
+    I[Intent]
+    CI[Counter-Intent]
+
+    %% Orchestration
+    O[Orchestrator / Scheduler]
+
+    %% Agents
+    A1[Worker Agent]
+    A2[Specialist Agent]
+    MA[Meta-Agent]
+
+    %% Execution
+    T[Tools / Syscalls]
+    M[Memory Substrate]
+
+    %% Scopes
+    S[Scopes / Authority]
+
+    %% Flow
+    H -->|emit intent| PA
+    PA --> I
+    I --> O
+
+    O -->|route| A1
+    O -->|route| A2
+
+    A1 -->|delegate| A2
+    A1 -->|invoke| T
+    A2 -->|invoke| T
+
+    A1 --> M
+    A2 --> M
+
+    T --> CI
+    A1 --> CI
+    A2 --> CI
+
+    CI --> O
+    O --> PA
+    PA -->|reconcile| H
+
+    %% Governance
+    MA -->|edit blueprint| A1
+    MA -->|edit blueprint| A2
+    MA -->|adjust scope| S
+
+    S --> A1
+    S --> A2
+    S --> T

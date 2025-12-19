@@ -232,3 +232,9 @@ It is what happens when intelligence becomes ambient.
 > to coordinating with them.**
 
 Everything else follows.
+
+---
+
+**Further Reading**
+- [Web 4 OS Diagram](diagrams/web4-os.mmd)
+- [Appendix](APPENDIX.md)
