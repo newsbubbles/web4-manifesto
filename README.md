@@ -6,10 +6,10 @@ It is not owned by any company, product, or platform.
 Any implementation claiming alignment with these ideas must stand on its own merits.
 
 ## Contents
-- MANIFESTO.md — philosophical framing
-- APPENDIX.md — technical primitives
-- spec/ — evolving reference specification
-- governance/ — contribution and governance model
+- [MANIFESTO.md](MANIFESTO.md) — philosophical framing
+- [APPENDIX.md](APPENDIX.md) — technical primitives
+- [spec/](spec/) — evolving reference specification
+- [governance/](governance/) — contribution and governance model
 
 This document is intentionally early, minimal, and open to iteration.
 
